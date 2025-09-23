@@ -53,6 +53,7 @@ comment: [week01] 소수구하기 - 설명 주석 추가
 - **docs**: README 등 문서 수정
 - **merge**: merge
 - **rename**: 파일/폴더명 수정 또는 이동
+- **chore**: 프로젝트 구조 변경, 폴더/파일 생성 등 잡일
 
 ---
 
