@@ -24,7 +24,6 @@ public class N과M_1_김재훈 {
         // M개를 고른 수열 저장
         arr = new int[m];
 
-        // 재귀
         backtracking(0);
     }
 
@@ -41,6 +40,7 @@ public class N과M_1_김재훈 {
             if (!visited[i]) {
                 visited[i] = true;
                 arr[depth] = i + 1;
+                // 재귀 호출
                 backtracking(depth + 1);
                 visited[i] = false;
             }
