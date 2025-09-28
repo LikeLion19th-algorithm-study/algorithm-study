@@ -48,16 +48,7 @@ public class 골드바흐의추측_박나현 {
             }
         }
     }
-//    private static boolean isPrime(int n) {
-//        if (n < 2) return false;
-//        else if (n == 2) return true;
-//        else {
-//            for (int j = 2; j * j <= n; j++) {
-//                if (n % j == 0) return false;
-//            }
-//        }
-//        return true;
-//    }
+
     private static int getSmallPrime(int n) {
         for (int i = n/2; i >= 2; i--) {
             if (isPrime[i] && isPrime[n-i]){
