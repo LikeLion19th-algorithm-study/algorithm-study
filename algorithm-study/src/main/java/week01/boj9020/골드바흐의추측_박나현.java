@@ -42,7 +42,7 @@ public class 골드바흐의추측_박나현 {
 
         for (int i = 2; i * i <= n; i++) {
             if (isPrime[i]) {
-                for(int j = i*i; j<= n; j += i){//그 이하의 수는 모두 검사했으므로 i*i부터 시작
+                for(int j = i*i; j<= n; j += i){
                     isPrime[j] = false;
                 }
             }
