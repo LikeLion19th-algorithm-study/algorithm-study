@@ -3,36 +3,41 @@ package week01.boj15649;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 /**
  * 1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열
+ * StringBuilder, StringTokenizer 사용 전 수행 시간: 1740ms
+ * StringBuilder, StringTokenizer 사용 후 수행 시간: 252ms
  */
 public class N과M_1_김재훈 {
 
+    // 방문한 숫자를 확인하기 위한 배열
     static boolean[] visited;
+    // M개를 고른 수열 저장
     static int[] arr;
+    static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        String[] split = br.readLine().split(" ");
-        int n = Integer.parseInt(split[0]);
-        int m = Integer.parseInt(split[1]);
+        int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
 
-        // N까지의 자연수 중 방문한 숫자 확인
         visited = new boolean[n];
-        // M개를 고른 수열 저장
         arr = new int[m];
 
         backtracking(0);
+        System.out.println(sb);
     }
 
     static void backtracking(int depth) {
         if (depth == arr.length) {
             for (int value : arr) {
-                System.out.print(value + " ");
+                sb.append(value).append(" ");
             }
-            System.out.println();
+            sb.append("\n");
             return;
         }
 
