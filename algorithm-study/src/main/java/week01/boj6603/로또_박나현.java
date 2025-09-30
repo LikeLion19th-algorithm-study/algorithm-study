@@ -8,14 +8,11 @@ import java.util.StringTokenizer;
 public class 로또_박나현 {
     static StringBuilder sb = new StringBuilder();
     static int[] numbers;
-    static int[] arr;
+    static int[] arr = new int[6];
     static int k;
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        arr = new int[6];
-
         while(true) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             k = Integer.parseInt(st.nextToken());
@@ -40,7 +37,6 @@ public class 로또_박나현 {
             sb.append("\n");
             return;
         }
-
         for (int i = start; i < k; i++) {
             arr[depth] = numbers[i];
             backtrack(i+1, depth+1);
