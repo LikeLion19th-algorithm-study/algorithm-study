@@ -8,6 +8,7 @@ import java.util.Map;
  * 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.
  * completion의 길이는 participant의 길이보다 1 작습니다.
  * 참가자 중에는 동명이인이 있을 수 있습니다.
+ * <p>
  * 정확성: 58.3 / 효율성: 41.7
  */
 public class 완주하지못한선수_김재훈 {
