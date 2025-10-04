@@ -12,6 +12,7 @@ import java.util.Set;
  */
 public class 폰켓몬_김재훈 {
 
+    // HashSet을 사용한 풀이
     public static int solution1(int[] nums) {
         Set<Integer> set = new HashSet<>();
 
@@ -24,6 +25,7 @@ public class 폰켓몬_김재훈 {
         return Math.min(set.size(), nums.length / 2);
     }
 
+    // HashMap을 사용한 풀이
     public static int solution2(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
 
@@ -31,6 +33,8 @@ public class 폰켓몬_김재훈 {
             map.compute(num, (k, v) -> v == null ? 1 : v + 1);
         }
 
+        // map의 사이즈가 nums / 2 보다 클 경우 nums / 2 를 반환하면 된다. (예 #1 map.size() = 3, nums,length / 2 = 2) => return 2)
+        // map의 사이즈가 nums / 2 보다 작은 경우 map의 사이즈를 반환하면 된다. (예 #3 map.size() = 2, nums.length / 2 = 3 => return 2))
         return Math.min(map.size(), nums.length / 2);
     }
 
@@ -38,9 +42,6 @@ public class 폰켓몬_김재훈 {
         int[] nums1 = {3, 1, 2, 3};
         int[] nums2 = {3, 3, 3, 2, 2, 4};
         int[] nums3 = {3, 3, 3, 2, 2, 2};
-
-        Map<Integer, Integer> map = new HashMap<>();
-        Set<Integer> set = new HashSet<>();
 
         int result1 = solution1(nums1);
         int result2 = solution2(nums2);
