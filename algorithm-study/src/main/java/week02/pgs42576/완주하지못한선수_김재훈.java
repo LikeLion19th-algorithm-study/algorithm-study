@@ -15,23 +15,23 @@ public class 완주하지못한선수_김재훈 {
 
     public static String solution(String[] participant, String[] completion) {
         Map<String, Integer> map = new HashMap<>(); // key = 이름, value = 참가자 수
-        String answer = "";
 
         for (String participantName : participant) {
             map.compute(participantName, (k, v) -> v == null ? 1 : v + 1);
         }
 
+        // 완주자의 Value를 1씩 뺀다.
         for (String completionName : completion) {
             map.compute(completionName, (k, v) -> v == null ? 0 : v - 1);
         }
 
-        // completion의 길이는 participant의 길이보다 1 작기 때문에 value가 0이 아닌 key가 한 개만 남는다.
+        // completion의 길이는 participant의 길이보다 1 작기 때문에 Value가 0이 아닌 key는 한 개만 남는다.
         for (String name : map.keySet()) {
             if (map.get(name) != 0) {
-                answer = name;
+                return name;
             }
         }
-        return answer;
+        return "";
     }
 
     public static void main(String[] args) {
