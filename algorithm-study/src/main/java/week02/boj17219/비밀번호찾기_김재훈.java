@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
  * 두번째 줄부터 N개의 줄에 걸쳐 각 줄에 사이트 주소와 비밀번호가 공백으로 구분되어 주어진다.
  * 사이트 주소는 알파벳 소문자, 알파벳 대문자, 대시('-'), 마침표('.')로 이루어져 있고, 중복되지 않는다.
  * <p>
- * 시간: 564ms / 메모리: 62056KB
+ * 시간: 532ms / 메모리: 58344KB
  */
 public class 비밀번호찾기_김재훈 {
 
@@ -20,7 +20,9 @@ public class 비밀번호찾기_김재훈 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         StringBuilder sb = new StringBuilder();
+
         Map<String, String> map = new HashMap<>();
+
         int n = Integer.parseInt(st.nextToken()); // 저장하는 사이트 주소의 수
         int m = Integer.parseInt(st.nextToken()); // 비밀번호를 찾으려는 사이트 주소의 수
 
@@ -34,8 +36,10 @@ public class 비밀번호찾기_김재훈 {
 
         // 사이트와 비밀번호 찾기
         while (m-- > 0) {
-            st = new StringTokenizer(br.readLine());
-            sb.append(map.getOrDefault(st.nextToken(), "")).append("\n");
+//            st = new StringTokenizer(br.readLine());
+//            sb.append(map.getOrDefault(st.nextToken(), "")).append("\n");
+            String site = br.readLine(); // 나눌 필요 없이 한 줄씩 읽기만 하면 된다.
+            sb.append(map.getOrDefault(site, "")).append("\n"); // 저장되지 않은 사이트일 경우 공백
         }
         System.out.println(sb);
     }
