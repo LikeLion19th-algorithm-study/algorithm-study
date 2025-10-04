@@ -18,17 +18,15 @@ import java.util.Arrays;
  */
 public class 전화번호목록_김재훈 {
     public static boolean solution1(String[] phone_book) {
-        boolean answer = true;
-
-        Arrays.sort(phone_book); // 짧은 문자가 접두어가 될 가능성이 높으므로 정렬을 먼저 한다.
+        Arrays.sort(phone_book); // 짧은 문자가 접두어가 될 가능성이 높으므로 앞쪽으로 정렬한다.
 
         for (int i = 0; i < phone_book.length - 1; i++) {
+            // 접두어가 된 경우 false를 반환한다.
             if (phone_book[i + 1].startsWith(phone_book[i])) {
-                answer = false;
-                break;
+                return false;
             }
         }
-        return answer;
+        return true;
     }
 
     public static void main(String[] args) {
