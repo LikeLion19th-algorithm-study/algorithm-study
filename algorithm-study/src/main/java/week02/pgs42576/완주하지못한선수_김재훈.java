@@ -35,10 +35,21 @@ public class 완주하지못한선수_김재훈 {
     }
 
     public static void main(String[] args) {
-        String[] participant = {"leo", "kiki", "eden"};
-        String[] completion = {"kiki", "eden"};
+        String[] participant1 = {"leo", "kiki", "eden"};
+        String[] completion1 = {"kiki", "eden"};
 
-        String result = solution(participant, completion);
-        System.out.println(result);
+        String[] participant2 = {"marina", "josipa", "nikola", "vinko", "filipa"};
+        String[] completion2= {"josipa", "filipa", "marina", "nikola"};
+
+        String[] participant3 = {"mislav", "stanko", "mislav", "ana"};
+        String[] completion3 = {"stanko", "ana", "mislav"};
+
+        String result1 = solution(participant1, completion1);
+        String result2 = solution(participant2, completion2);
+        String result3 = solution(participant3, completion3);
+
+        System.out.println(result1);
+        System.out.println(result2);
+        System.out.println(result3);
     }
 }
