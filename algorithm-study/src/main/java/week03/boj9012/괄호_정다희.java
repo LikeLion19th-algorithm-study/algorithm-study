@@ -8,6 +8,21 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * 백준 9012번 - 괄호
+ * 주어진 괄호 문자열이 올바른 괄호(VPS)인지 판별하는 문제.
+ *
+ * 조건:
+ * - '(' 와 ')' 의 개수가 같아야 하고
+ * - 순회 중 ')' 가 '(' 보다 많아지면 안 된다.
+ *
+ * 풀이:
+ * - '('일 때 push, ')'일 때 pop
+ * - 중간에 pop 불가하면 NO
+ * - 끝나고 스택이 비면 YES, 아니면 NO
+ *
+ * 메모리: 14372ms / 시간 : 108ms
+ */
 public class 괄호_정다희 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
