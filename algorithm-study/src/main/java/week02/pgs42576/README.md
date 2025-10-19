@@ -38,7 +38,7 @@
     - `Map<String, Integer>`에 `key = "A", value = 100`, `key = "B", value = 200`인 데이터를 `put`한다.
     - `map.computeIfPresent("A", (k, v) -> v + 50)` : Key가 A인 Value는 100이 존재하므로 50을 더한 150을 반환한다.
     - `map.computeIfPresent("B", (k, v) -> null)` : Key가 B인 Value가 null이 되면서 Key를 제거하고 null을 반환한다.
-    - `map.computeIfPresent("C", (k, v) -> v + 10)` : Key가 30인 Value가 존재하지 않으므로 null을 반환한다.
+    - `map.computeIfPresent("C", (k, v) -> v + 10)` : Key가 C인 Value가 존재하지 않으므로 null을 반환한다.
 
 
 - `getOrDefault(Object key, V defaultValue)`
