@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
  * - 각 명령어에 맞게 push/pop/peek/isEmpty 처리
  * - pop, top 시 스택이 비어 있으면 -1 출력
  *
- * 메모리: 19788ms / 시간 160 ms
+ * 메모리: 19788KB / 시간 160 ms
  * (if문으로 풀었을 때 메모리: 19792 / 시간 168ms)
  */
 public class 스택_정다희 {
