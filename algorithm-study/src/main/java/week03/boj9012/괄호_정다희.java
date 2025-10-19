@@ -21,7 +21,7 @@ import java.util.Deque;
  * - 중간에 pop 불가하면 NO
  * - 끝나고 스택이 비면 YES, 아니면 NO
  *
- * 메모리: 14372ms / 시간 : 108ms
+ * 메모리: 14372KB / 시간 : 108ms
  */
 public class 괄호_정다희 {
     public static void main(String[] args) throws IOException {
