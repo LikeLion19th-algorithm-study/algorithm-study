@@ -3,7 +3,7 @@ package week02.pgs1845;
 import java.util.HashSet;
 import java.util.Set;
 
-public class 폰켓몬 {
+public class 폰켓몬_이해인 {
     public int solution(int[] nums) {
         // 최대 선택 수 = 전체의 절반
         int maxChoose = nums.length / 2;

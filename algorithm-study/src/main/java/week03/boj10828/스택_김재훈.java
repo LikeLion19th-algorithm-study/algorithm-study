@@ -1,4 +1,4 @@
-package week03.boj10773;
+package week03.boj10828;
 
 import java.io.*;
 import java.util.Stack;

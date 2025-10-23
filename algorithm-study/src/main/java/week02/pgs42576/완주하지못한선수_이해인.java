@@ -3,7 +3,7 @@ package week02.pgs42576;
 import java.util.HashMap;
 import java.util.Map;
 
-public class 완주하지못한선수 {
+public class 완주하지못한선수_이해인 {
     public String solution(String[] participant, String[] completion) {
         // 중복 이름이 있을 수 있으므로 해시 맵 사용
         Map<String, Integer> countMap = new HashMap<>();

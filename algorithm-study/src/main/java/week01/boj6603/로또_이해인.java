@@ -12,7 +12,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 로또 {
+public class 로또_이해인 {
     static int k;
     static int[] arr;
     static int[] sel = new int[6];

@@ -3,7 +3,7 @@ package week02.pgs42578;
 import java.util.HashMap;
 import java.util.Map;
 
-public class 의상 {
+public class 의상_이해인 {
     public int solution(String[][] clothes) {
         // 종류별 의상 개수 저장
         Map<String, Integer> map = new HashMap<>();

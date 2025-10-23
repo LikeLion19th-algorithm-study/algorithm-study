@@ -11,7 +11,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 소수찾기 {
+public class 소수찾기_이해인 {
     public static boolean isPrime(int x) {
         if (x < 2) return false;
         if (x == 2) return true;

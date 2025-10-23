@@ -3,7 +3,7 @@ package week02.boj17219;
 import java.io.*;
 import java.util.*;
 
-public class 비밀번호찾기 {
+public class 비밀번호찾기_이해인 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());

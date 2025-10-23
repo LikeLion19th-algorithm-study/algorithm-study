@@ -12,7 +12,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 최대공약수와최소공배수 {
+public class 최대공약수와최소공배수_이해인 {
     public static long gcd(long a, long b) {
         while (b != 0) {
             long t = a % b;

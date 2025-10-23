@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class N과M {
+public class N과M_이해인 {
     static int N, M;
     static boolean[] used;
     static int[] result;
