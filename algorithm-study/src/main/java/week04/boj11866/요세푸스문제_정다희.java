@@ -38,6 +38,6 @@ public class 요세푸스문제_정다희 {
             sb.append(queue.isEmpty() ? ">" : ", ");
         }
 
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }

@@ -51,6 +51,6 @@ public class 큐_정다희 {
                     break;
             }
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }
