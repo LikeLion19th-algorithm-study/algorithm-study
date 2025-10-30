@@ -3,6 +3,7 @@ package week04.boj10845;
 import java.io.*;
 import java.util.*;
 
+// 메모리: 20052KB, 시간: 164ms
 public class 큐_박나현 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
