@@ -1,4 +1,4 @@
-package main.java.week04.boj2164;
+package week04.boj2164;
 
 import java.io.BufferedReader;
 import java.io.IOException;
