@@ -45,8 +45,8 @@ public class 카드문자열_정다희 {
             for (Character card : cards) sb.append(card);
             // 마지막 카드면 줄바꿈
             if (i < testCount - 1) sb.append("\n");
-
         }
+
         System.out.println(sb);
     }
 }
