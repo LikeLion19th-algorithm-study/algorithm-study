@@ -17,7 +17,7 @@ import java.util.StringTokenizer;
  * M명의 사람이 제거될 때마다 원을 돌리는 방향을 바꾼다.
  * (7, 3, 4)-반전 요세푸스 순열: <3, 6, 2, 7, 1, 5, 4>
  * <p>
- * 메모리: 19460KB / 시간: 328ms
+ * 반복문<-> 조건문 수정 전 - 메모리: 19460KB / 시간: 328ms
  */
 public class 반전요세푸스_김재훈 {
 
@@ -34,17 +34,17 @@ public class 반전요세푸스_김재훈 {
         int count = 0; // 반복문 내에서 M을 판별하기 위한 변수
         boolean flag = true; // 방향을 바꿔주기 위한 flag, true = 정방향, false = 역방향
 
-        initDeque(n);
+        initDeque(n); // N명의 사람 번호 순서대로 나열
 
         while (!deque.isEmpty()) {
-/*          해당 코드가 없는 것이 메모리와 시간 면에서 효율적이다. -> 왜????
-
-            if (deque.size() == 1) { // 덱의 사이즈가 1만 남으면 반복할 필요 없이 바로 결과값에 추가
-                sb.append(deque.poll());
-                break;
+            if (flag) {
+                repeatForward(k); // 정방향 반복
+            } else {
+                repeatReverse(k); // 역방향 반복
             }
-*/
 
+/*
+            // 반복문 내에서 조건문 도는 것보다 조건문 내에서 반복문 도는 것이 빠르다.
             for (int i = 0; i < k - 1; i++) {
                 if (flag) {
                     deque.offerLast(deque.pollFirst()); // 정방향, 앞 사람을 뒤로 보내기
@@ -52,9 +52,8 @@ public class 반전요세푸스_김재훈 {
                     deque.offerFirst(deque.pollLast()); // 역방향, 뒷 사람을 앞으로 보내기
                 }
             }
+*/
 
-            int removed = flag ? deque.pollFirst() : deque.pollLast(); // 정방향일 때는 앞에서 뽑고, 역방향일 때는 뒤에서 뽑는다.
-            sb.append(removed).append("\n");
             count++; // 한 명을 추가할 때마다 1씩 증가한다.
 
             if (count % m == 0) { // 나눴을 때 0이 되면 M의 배수
@@ -68,5 +67,19 @@ public class 반전요세푸스_김재훈 {
         for (int i = 1; i <= n; i++) {
             deque.offer(i);
         }
+    }
+
+    private static void repeatForward(int k) {
+        for (int i = 0; i < k - 1; i++) {
+            deque.offerLast(deque.pollFirst()); // 정방향, 앞 사람을 뒤로 보내기
+        }
+        sb.append(deque.pollFirst()).append("\n");
+    }
+
+    private static void repeatReverse(int k) {
+        for (int i = 0; i < k - 1; i++) {
+            deque.offerFirst(deque.pollLast()); // 역방향, 뒷 사람을 앞으로 보내기
+        }
+        sb.append(deque.pollLast()).append("\n");
     }
 }
