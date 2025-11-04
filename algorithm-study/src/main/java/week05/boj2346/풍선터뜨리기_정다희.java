@@ -32,7 +32,7 @@ public class 풍선터뜨리기_정다희 {
 
         while(!deque.isEmpty()) {
             int idx = deque.pollFirst(); // 처음 1번 풍선 뺌
-            sb.append(idx).append(" "); //
+            sb.append(idx).append(" ");
 
             int move = arr[idx - 1]; // idx 0부터 시작
             if (deque.isEmpty()) break; // deque가 비었으면 그냥 멈춤
@@ -42,7 +42,7 @@ public class 풍선터뜨리기_정다희 {
                     deque.offerLast(deque.pollFirst()); // 맨앞에꺼 빼서 맨뒤로 보냄 - 왼쪽 회전
                 }
             } else {
-                for (int j  =0; j < -move; j++) {
+                for (int j = 0; j < Math.abs(move); j++) {
                     deque.offerFirst(deque.pollLast()); // 맨뒤에꺼 빼서 앞으로 보냄 - 오른쪽 회전
                 }
             }
