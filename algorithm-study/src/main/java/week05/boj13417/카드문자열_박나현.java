@@ -26,11 +26,10 @@ public class 카드문자열_박나현 {
                 String c = st.nextToken();
                 if (deq.isEmpty()) {
                     deq.offer(c);
-                } else {
-                    if (c.compareTo(deq.peekFirst()) > 0) {
-                        deq.offerLast(c);
-                    } else deq.offerFirst(c);
+                    continue;
                 }
+                if (c.compareTo(deq.peekFirst()) > 0) deq.offerLast(c);
+                else deq.offerFirst(c);
             }
 
             while (!deq.isEmpty()) {
