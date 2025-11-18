@@ -29,15 +29,15 @@ public class N번째큰수_정다희 {
                 int x = Integer.parseInt(st.nextToken());
                 if (pq.size() < N) {
                     // N보다 pq에 들어있는 숫자가 작으면 추가
-                    pq.offer(x);
+                    pq.offer(x); // 12 7 9 15 5 -> 5 7 9 12 15
                 } else if (x > pq.peek()) {
-                    // 입력 숫자가 첫번재 숫자보다 크다면
-                    pq.poll(); // 가장 작은 수 빼고
-                    pq.offer(x); // 입력 숫자를 넣음
+                    // 입력 숫자(13)가 첫번째 숫자(5)보다 크다면
+                    pq.poll(); // 가장 작은 수(5) 빼고
+                    pq.offer(x); // 입력 숫자(13)를 넣음 -> 9 11 12 13 15
                 }
             }
         }
-
+        // 35 41 48 49 52
         System.out.println(pq.peek());
     }
 }
