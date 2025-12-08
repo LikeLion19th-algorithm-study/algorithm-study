@@ -10,6 +10,9 @@ public class 하노이탑_박나현 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
+
+        sb.append((int)Math.pow(2, n) - 1).append("\n");
+        // 하노이탑 시작: 1번 기둥 → 3번 기둥, 2번 기둥은 임시
         hanoi(n, 1, 2, 3);
         System.out.println(sb);
     }
