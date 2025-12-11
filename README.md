@@ -93,7 +93,7 @@ comment: [week01] 소수구하기 - 설명 주석 추가
 | week06 | 11/04 ~ 11/10 | 힙                                | 양민섭 | [절대값 힙 (11286)](https://www.acmicpc.net/problem/11286) <br> [최대 힙 (11279)](https://www.acmicpc.net/problem/11279) <br> [N번째 큰 수 (2075)](https://www.acmicpc.net/problem/2075)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | week07 | 11/18 ~ 11/24 | 재귀                              | 박나현 | [피보나치 수 5 (10870)](https://www.acmicpc.net/problem/10870) <br> [재귀함수가 뭔가요? (17478)](https://www.acmicpc.net/problem/17478) <br> [하노이 탑 (11729)](https://www.acmicpc.net/problem/11729)  |
 | week08 | 12/02 ~ 12/08 | 정렬                              | 심민아 | [수 정렬하기 2 (2751)](https://www.acmicpc.net/problem/2751) <br> [나이순 정렬 (10814)](https://www.acmicpc.net/problem/10814) <br> [시리얼 번호 (1431)](https://www.acmicpc.net/problem/1431) |
-| week09 | 12/09 ~ 12/15 | 그래프 (기초 DFS/BFS)              | 이해인 | - |
+| week09 | 12/09 ~ 12/15 | 그래프 (기초 DFS/BFS)              | 이해인 |  [미로 탐색 (2178)](https://www.acmicpc.net/problem/2178) <br> [DFS와 BFS (1260)](https://www.acmicpc.net/problem/1260) <br> [바이러스 (2606)](https://www.acmicpc.net/problem/2606) |
 | week10 | 12/16 ~ 12/22 | 그래프 (DFS와 BFS 응용, 최단경로)    | 정다희 | - |
 | week11 | 12/23 ~ 12/29 | 이분 탐색                          | 김재훈 | - |
 | week12 | 12/30 ~ 01/05 | 분할정복                           | 양민섭 | - |
